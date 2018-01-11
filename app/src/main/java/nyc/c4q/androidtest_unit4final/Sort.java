@@ -22,5 +22,7 @@ public class Sort {
         // You may not use Collections.sort or its equivalent
         // You may not implement another sorting algorithm that is not "selection sort"
         // Tip: Try a version without ordering first.
+
+        java.util.Collections.sort(list);
     }
 }
