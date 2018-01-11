@@ -50,13 +50,6 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ColorViewHol
             // display a long toast with the text "{color_name} has a HEX value of {color_hex}
             // for example: "blue has a HEX value of #0000ff"
 
-            output = holder.name.getText().toString() + " has a HEX value of " + "";
-            holder.name.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(view.getContext(), output, Toast.LENGTH_SHORT).show();
-                }
-            });
         }
     }
 
@@ -78,6 +71,14 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ColorViewHol
         public ColorViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.color_name);
+
+            output = name.getText().toString() + " has a HEX value of " + "";
+            name.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(view.getContext(), output, Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 }
