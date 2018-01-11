@@ -21,6 +21,7 @@ import java.util.List;
 public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ColorViewHolder> {
 
     private static String TAG = "ColorAdapter";
+    private int position;
     private List<String> colorNames;
     private HashMap<String, String> colorDict;
     private String output;
@@ -72,7 +73,7 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ColorViewHol
             super(itemView);
             name = itemView.findViewById(R.id.color_name);
 
-            output = name.getText().toString() + " has a HEX value of " + "";
+            output = colorNames.get(position) + " has a HEX value of " + colorDict.get(position);
             name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

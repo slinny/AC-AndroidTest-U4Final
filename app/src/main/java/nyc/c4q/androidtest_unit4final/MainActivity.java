@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private final String TAG = getClass().getSimpleName();
     private InfoFragment fragment;
 
+    private static final String  url= "https://newsapi.org/v2/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,5 +82,7 @@ public class MainActivity extends AppCompatActivity {
 //                .show(fragment)
 //                .commit();
 //    }
+
+
 
 }
